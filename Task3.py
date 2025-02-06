@@ -20,8 +20,8 @@ df = pd.read_csv("twitter_links.csv", header=None)
 twitter_list = df.iloc[:, 0].tolist()
 
 # Twitter login credentials
-EMAIL = "spare.yash.2025@gmail.com"
-USERNAME = "Yash349513"
+EMAIL = "email"
+USERNAME = "username"
 PASSWORD = "password"
 
 def wait_for_element(xpath, timeout=5):  # Reduced timeout to 5 seconds
@@ -101,7 +101,7 @@ conn = mysql.connector.connect(
     host="localhost",
     user="root",
     password="password",
-    database="yash_db"
+    database="your_db"
 )
 cursor = conn.cursor()
 
@@ -127,7 +127,7 @@ values = [tuple(d.values()) for d in data]
 cursor.executemany(insert_query, values)
 conn.commit()
 
-print("Data is entered into MySQL")
+print("data is entered into MySQL")
 
 # Close connection
 cursor.close()
